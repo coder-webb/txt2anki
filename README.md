@@ -1,6 +1,12 @@
 # txt2anki
-Convert colon separated terms/definitions to a text file importable by Anki<br>
-<br>
+<h3>Convert colon separated terms/definitions to a text file importable by Anki</h3><br>
+
+Requirements<br>
+```
+.NET SDK 9.0
+https://dotnet.microsoft.com/en-us/download/dotnet/9.0
+```
+
 To build, run
 ```
 dotnet build txt2anki.csproj

@@ -1,0 +1,154 @@
+=====================================================
+---                   Chapter 1                   ---
+=====================================================
+
+=======================================================
+Chapter 1 Lesson 1 Exploring AI Optimization Algorithms
+=======================================================
+evolutionary algorithms: a class of optimization algorithms inspired by the process of natural selection and genetics. These algorithms evolve a population of candidate solutions over time, improving their fitness function to solve complex problems
+natural selection: the process by which organisms better adapted to their environment tend to survive and produce more offspring
+fitness function: a function used in evolutionary algorithms to evaluate how well a given solution performs, determining its likelihood of being selected for the next generation
+evolutionary strategies (ES): a subset of evolutionary algorithms focused on the optimization of continuous parameters
+mutation: a genetic algorithm operation that introduces random changes to an individual's genes to maintain genetic diversity
+recombination: a genetic algorithm operation that combines parts of parent solutions to produce offspring, also known as a "crossover" in some contexts
+population: a group of candidate solutions in evolutionary algorithms that evolves over generations with selection, mutation, and recombination driving the optimization process
+selection: a process by which the fittest candidate solutions are chosen to carry their traits to the next generation, ensuring superior solutions dominate the evolutionary cycle in evolutionary algorithms.
+optimization challenges: problems that require finding the best solution from a set of possible solutions, often involving trade-offs between different objectives
+genetic algorithms (GA): a type of evolutionary algorithm that uses techniques such as selection, crossover, and mutation to evolve solutions to problems
+crossover: a genetic algorithm operation that combines parts of two parent solutions to create offspring, facilitating the exploration of new solution spaces; also called "recombination" in some contexts
+differential evolution (DE): is an optimization algorithm that helps find the best solution to complex problems by evolving a group of possible answers over time
+
+gradient: a vector of partial derivatives that indicates the direction and rate of change of the loss function
+gradient descent: an optimization method that iteratively adjusts parameters in the direction of the steepest decrease in loss. like climbing down a hill step by step to reach the bottom (minimum error)
+loss function: a measure of the difference between predicted and actual values that guides the adjustments made during gradient descent
+batch gradient descent: a method that updates parameters based on the average gradients calculated from all training examples in the dataset
+epoch: one complete pass through the entire training dataset during the training process
+stochastic gradient descent (SGD): an optimization method that updates parameters using the gradient calculated from a small random subset of training examples
+mini-batch: a small, random subset of training examples used in each step of stochastic gradient descent to improve convergence speed
+online gradient descent: a variant of gradient descent that updates parameters with each new data point, making it suitable for streaming data scenarios
+gradient boosting: a method that leverages gradient descent to iteratively improve model performance by adding new models focused on reducing the residual errors of previous iterations. like building a sculpture layer by layer, each time smoothing out the imperfections from the previous layer
+decision tree: a tree-like model used in supervised machine learning for classification and regression where nodes represent decisions based on features, branches represent decision rules, and leaf nodes represent outcomes or predictions
+regularization: techniques employed to prevent overfitting in models, including controlling tree size and tuning the learning rate in gradient boosting
+XGBoost (eXtreme gradient boosting): an advanced implementation of gradient boosting known for its high efficiency, regularization capabilities, and effectiveness in large-scale machine learning tasks
+gradient boosted trees: a machine learning algorithm that sequentially builds multiple decision trees to enhance model accuracy through ensemble learning
+
+simulated annealing: an optimization algorithm that combines hill climbing and random walk methods, allowing occasional downhill moves to escape local minima while gradually reducing the likelihood of such moves over time
+annealing: a process in metallurgy where materials are heated and then gradually cooled to reach a stable, low-energy state
+temperature (T): a parameter in simulated annealing that controls the probability of accepting worse moves; it is initially high to allow exploration and gradually decreased to focus on refinement
+
+local search algorithm: a method to find solutions by making small changes to an initial guess
+min-conflicts heuristic: a strategy to solve problems by picking the value that causes the fewest problems with other variables
+constraint satisfaction problem (CSP): a problem where you need to find values for variables that meet certain rules or conditions
+tabu search: a technique that helps avoid going back to recently tried solutions and helps find better answers
+complete-state formulation: a way of solving problems where every variable already has a value and the solution is improved by changing one value at a time
+constraint weighting: a way to solve problems by giving more importance to harder rules, helping focus on the most important parts
+
+=======================================================
+Chapter 1 Lesson 1 Summary
+=======================================================
+Evolutionary algorithms mimic natural selection to find solutions by evolving potential answers through methods like genetic algorithms.
+Gradient descent improves models by adjusting parameters to minimize errors, while gradient boosting builds on existing models to correct mistakes and enhance performance.
+Simulated annealing explores solutions by initially allowing random changes then gradually focusing on refining the best solutions to avoid local minima.
+Tabu search helps solve problems by exploring new solutions and avoiding recently visited ones to find better answers.
+Local search techniques like min-conflicts and tabu search are used to efficiently solve constraint satisfaction problems by making small changes to improve solutions.
+
+=======================================================
+Chapter 1 Lesson 2 Languages and Frameworks
+=======================================================
+stationarity assumption: the assumption that the statistical properties of a time series (e.g., mean, variance) are constant over time, implying that the underlying data-generating process does not change
+error rate: the proportion of incorrect predictions made by a model on a dataset, calculated as misclassifications divided by total examples
+test set: a separate dataset used to evaluate the performance of a model after it has been trained, providing an estimate of how well the model generalizes to unseen data
+training set: a subset of the data used to train a machine learning model, enabling it to learn patterns and relationships from the data
+hyperparameters: parameters set before training that define the model architecture or training process, such as the number of nodes in a decision tree
+validation set: a subset of data used to evaluate and select models that is separate from the test set
+model selection: choosing the best hypothesis or model from a set of candidates based on performance metrics
+optimization: the process of adjusting model parameters to minimize or maximize an objective function
+interpolated: a model or method that fits the training data exactly or generates intermediate predictions between known data points
+generalization loss: the difference in performance between a model's training data and unseen data, reflecting its ability to generalize
+empirical loss: the loss calculated on the training dataset, measuring how well a model fits the observed data
+realizable: when a perfect or near-perfect hypothesis exists within the hypothesis space
+variance: the extent to which a model's predictions change with different training sets, indicating sensitivity to training data changes
+computationally intractable: a problem that cannot be solved efficiently within a reasonable amount of time due to excessive time complexity.
+small-scale learning: learning tasks or models involving relatively small datasets with minimal computational resources
+large-scale learning: learning tasks involving very large datasets that require significant computational resources and often specialized algorithms or hardware.
+underfitting: when a model is too simple and learns too little; high error on training and test data
+overfitting: when a model is too complex and learns too much (including noise); low training data error but high test data error; cannot learn new things
+
+learning rate is denoted by: α (alpha). Selecting the appropriate learning rate is essential for effective training. A rate that is too large can cause the model to overshoot the minimum, while a rate that is too small may result in slow convergence.
+learning rate: the parameter in gradient descent algorithms that controls the size of adjustments made to the model's parameters based on the error during training; influences how quickly or slowly a model learns
+learning rate scheduling: a technique for adjusting the learning rate during training, typically by decreasing it over time according to a predefined schedule or algorithm; helps optimize training efficiency and stabilize the learning process
+
+moving from theoretical understanding to practical application of machine learning systems requires 3 steps: problem formation (clearly defined problem; how can machine learning address it), data collection (obtaining, handling, and assessing data collected from public datasets, user contributed, or synthetic), and model selection and training (algorithms, hyperparams, performance evaluation)
+semi-supervised learning: a machine learning approach that uses both labeled and unlabeled data for training, enhancing model performance in scenarios where labeling is expensive or time-consuming
+weakly supervised learning: a method that employs partially labeled or noisy data for training, allowing for effective learning despite incomplete information
+ImageNet: a large visual database designed for use in visual object recognition software research
+crowdsourcing: obtaining input or data by soliciting contributions from a large group of people, typically online
+data provenance: information about the origin and history of data, including how it was collected and processed
+data augmentation: techniques to expand the diversity of a dataset by generating modified versions of existing data (e.g., through rotation, flipping, or color adjustment)
+unbalanced classes: a situation in which different classes in a dataset have unequal numbers of examples
+undersample: reducing the number of examples in a majority class to balance class distributions in a dataset
+oversample: increasing the number of examples in a minority class to balance class distributions in a dataset
+outliers: data points that are significantly different from other observations in the dataset
+one-hot encoding: a technique in machine learning that turns categorical data, like colors (red, green, blue), into numerical data for machines to understand
+exploratory data analysis (EDA): techniques used to understand, summarize, and identify patterns in the main characteristics of a dataset, often using visualizations
+t-distributed stochastic neighbor embedding (t-SNE): a technique for visualizing high-dimensional data by reducing it to two or three dimensions
+false positive: a result where a test incorrectly indicates the presence of a condition or characteristic
+receiver operating characteristic (ROC) curve: a graphical plot that shows how well a binary classifier model performs at different threshold values
+area under the curve (AUC): a measure of a model's performance, specifically the area under the ROC curve, indicating how well the model distinguishes between classes
+confusion matrix: a table used to evaluate the performance of a classification model by showing true positives, false positives, true negatives, and false negatives
+interpretable: models or methods that can be easily understood and explained, which is crucial for transparency and trust in machine learning applications
+long tail: a situation in which a small number of items are very popular, but there are many less popular items that together make up a significant portion of the total
+nonstationary: data or processes with statistical properties that change over time
+federated learning: data stays on the users device but model parameters are shared in a way that does not reveal private data
+regression model: a type of statistical or machine learning model used to understand and predict relationships between variables; “How does a change in one or more independent variables (inputs) affect a dependent variable (output)?”
+Linear Regression: Assumes a straight-line relationship between the dependent and independent variable. (Example: Predicting house price based on square footage.)
+Multiple Linear Regression: Extends linear regression to include two or more independent variables. (Example: Predicting sales using advertising spend, product price, and store size.)
+Polynomial Regression: Models curved relationships by including higher powers of the independent variable(s). (Example: Predicting population growth over time.)
+Logistic Regression: Used for predicting categorical outcomes, often binary (yes/no). (Example: Predicting whether a customer will buy a product.)
+Ridge Regression: A linear regression model that adds a penalty to reduce overfitting when predictors are correlated. (Example: Predicting stock prices with many economic indicators.)
+Lasso Regression: Similar to ridge regression but can shrink some coefficients to zero, effectively performing variable selection. (Example: Selecting key factors influencing house prices.)
+Elastic Net Regression: Combines ridge and lasso penalties to balance feature selection and regularization. (Example: Modeling customer churn with many correlated predictors.)
+Nonlinear Regression: Models relationships that are not linear in parameters. (Example: Modeling enzyme reaction rates in biochemistry.)
+Quantile Regression: Estimates conditional quantiles (like the median) of the dependent variable instead of the mean. (Example: Predicting the 90th percentile of income distribution.)
+Stepwise Regression: Automatically adds or removes predictors based on statistical criteria to find an optimal model. (Example: Identifying the most significant factors affecting exam performance.)
+
+=======================================================
+Chapter 1 Lesson 2 Summary
+=======================================================
+Model selection involves evaluating hypotheses using error rates from validation data to find the best predictor for future examples.
+Increasing model complexity may initially reduce validation error but could eventually lead to overfitting, requiring careful tuning.
+Effective model selection balances underfitting and overfitting by starting with simpler models and gradually increasing complexity.
+Learning rate scheduling adjusts the learning rate during training to enhance convergence by balancing fast initial updates with more precise adjustments.
+
+=======================================================
+Chapter 1 Lesson 3
+=======================================================
+artificial narrow intelligence (ANI): AI designed for a specific task or domain that lacks general intelligence and functions well only within predefined boundaries
+artificial general intelligence (AGI): AI with human-level intelligence capable of performing a wide range of tasks and potentially surpassing human intelligence in some cases; also known as strong AI
+artificial superintelligence (ASI): a theoretical AI model that would surpass all human intelligence and capabilities that currently does not exist
+machine learning (ML): A collection of algorithms that learn from data to identify patterns and correlations for making predictions or decisions
+deep learning: a method in AI that teaches computers to process data in a way inspired by the human brain
+neural networks: computational models that mimic the human brain's structure, consisting of interconnected nodes (neurons) to process data and make decisions; these networks improve over time by evaluating and tuning their accuracy
+generative AI: AI that creates new content—such as text, images, or audio—based on patterns learned from existing data
+cloud computing: a technology that provides scalable computing resources and storage over the internet, enabling faster processing and distribution of data
+edge computing: a computing model that processes data closer to its source rather than in a centralized data center, which can reduce latency and improve real-time AI performance
+advanced sensors: devices that collect data from the physical environment, which can enhance the capabilities of generative AI by providing richer input
+internet of things (IoT) devices: internet-connected devices that gather and share data, potentially improving the interactivity and responsiveness of AI systems
+computational resources: the hardware and infrastructure required to support the processing power needed for training and deploying AI models
+multimodal generation: the ability of AI to understand, interpret, and generate content across multiple types of data—such as text, images, audio, and video—in an integrated manner
+domain-specific models: AI models tailored to specific industries or applications, offering more precise solutions based on particular needs
+three-layered architecture: a structured approach in AI models involving distinct layers for data processing, synthesis, and output customization to enhance performance and flexibility
+machine learning: collection of algorithms that learn from data
+types of machine learning: supervised, unsupervised, semi-supervised, reinforcement, deep learning
+supervised learning: uses labeled training data set in which the outcomes and answers are known to teach the model expected answers
+types of supervised learning: regression algorithms
+unsupervised learning: a type of learning where raw data is fed into the algorithm that has not been labeled or pregiven any answers that we're looking for
+types of unsupervised learning: clustering algorithms
+types of semi-supervised learning: self-training algorithms
+reinforcement learning: we provide feedback to decisions or behavior the ai makes
+deep learning: inspired by the brain to recognize complex patterns and automate tasks that typically require humans
+neural network: what deep learning uses to accomplish a majority of its tasks; interconnection of nodes (neurons) in a network
+
+model training: the process of teaching machine learning or artificial intelligence models to learn patterns and make predictions by exposing them to labeled data and adjusting their internal parameters
+model optimization: the process of improving a model's performance by making it more effective and capable, which involves techniques like hyperparameter tuning, pruning, and adjusting model parameters
+transfer learning: a method where a pretrained model is adapted to new, but related, tasks to reduce the need for extensive training on new data

@@ -1,11 +1,16 @@
 # txt2anki
 Convert colon separated terms/definitions to a text file importable by Anki<br>
+<br>
 To build, run
 ```
 dotnet build txt2anki.csproj
 ```
+The executable is located in
+```
+txt2anki\bin\Debug\net9.0
+```
 
-Tip: You don't need separate files for your notes and terms/definitions<br>
+Tip: You don't need separate files for your notes and terms/definitions (see Example Files)<br>
 <br>
 Input text file requirements:
 <ul>

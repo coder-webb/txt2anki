@@ -1,12 +1,17 @@
 ﻿using System;
 using System.IO;
 
+Console.WriteLine(args[0]);
+Console.WriteLine(args[1]);
+if (args.Length > 2)
+{
+  Console.WriteLine(args[2]);
+}
+Console.WriteLine(args.Length);
 switch (args.Length)
 {
-    case 3:
-      break;
     case 2:
-      if (args[0].Equals("-h") || args[0].Equals("--help"))
+      if (args[1].Equals("-h") || args[1].Equals("--help"))
         {
           Console.WriteLine();
           Console.WriteLine("TXT2ANKI minimum in .txt layout requirements:");
@@ -19,17 +24,19 @@ switch (args.Length)
           Console.WriteLine("\tthe first colon indiciates the end of a term and the remainder of the line will be part of the definition");
           Console.WriteLine("\tafter running this program, you can import the newly created text file into Anki and it should just work");
           Console.WriteLine();
-          Environment.Exit(0);
+          Environment.Exit(1);
           break;
         }
-      goto default;
-    default:
+      goto case 1;
+    case 1:
       Console.WriteLine();
       Console.WriteLine("Use -h or --help");
       Console.WriteLine("or");
       Console.WriteLine("<in .txt> <out .txt>");
       Console.WriteLine();
-      Environment.Exit(0);
+      Environment.Exit(1);
+      break;
+    default:
       break;
 }
 

@@ -7,13 +7,9 @@ Requirements<br>
 https://dotnet.microsoft.com/en-us/download/dotnet/9.0
 ```
 
-To build, run
+To run
 ```
-dotnet build txt2anki.csproj
-```
-The executable is located in
-```
-txt2anki\bin\Debug\net9.0
+dotnet run Program.cs "in .txt" "out .txt"
 ```
 
 Tip: You don't need separate files for your notes and terms/definitions (see Example Files)<br>
